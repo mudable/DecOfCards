@@ -1,10 +1,18 @@
 package com.bridgelabz.decofcards;
 
+import java.util.Scanner;
+
 public class DecOfCards {
 	public static void main(String[] args) {
-		System.out.println("Welcome into the Decks of Cards!!! Thank you");
-		CardsPlay cardsPlay = new CardsPlay();
-		cardsPlay.generateUniqueCards();
-		cardsPlay.addPlayer();
+		Scanner sc = new Scanner(System.in);
+		System.out.print(" Enter number of players :");
+		int playerCount = sc.nextInt();
+
+		CardsPlay play = new CardsPlay(playerCount);
+		play.generateCards();
+		play.printCards();
+		play.addPlayer();
+		play.distributeCards();
+		play.printCardList();
 	}
 }
