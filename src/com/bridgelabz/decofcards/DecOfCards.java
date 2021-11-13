@@ -5,5 +5,6 @@ public class DecOfCards {
 		System.out.println("Welcome into the Decks of Cards!!! Thank you");
 		CardsPlay cardsPlay = new CardsPlay();
 		cardsPlay.generateUniqueCards();
+		cardsPlay.addPlayer();
 	}
 }
