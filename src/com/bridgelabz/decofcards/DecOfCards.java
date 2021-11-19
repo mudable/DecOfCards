@@ -3,14 +3,17 @@ package com.bridgelabz.decofcards;
 import java.util.Scanner;
 
 public class DecOfCards {
-	public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print(" Enter number of players :");
-        int playerCount = sc.nextInt();
-        CardsPlay play = new CardsPlay(playerCount);
-        play.generateCards();
-        play.addPlayer();
-        play.distributeCards();
-        play.printCardList();
-    }
-}
+	 public static void main(String[] args) {
+	        System.out.println("Welcome to the Deck of Cards Program !!");
+	        Scanner sc = new Scanner(System.in);
+	        System.out.println("Enter the number between 2 to 4");
+	        System.out.print("Enter number of players :");
+	        int playerCount = sc.nextInt();
+	        CardsPlay play = new CardsPlay(playerCount);
+	        play.generateCards();
+	        play.addPlayer();
+	        play.setPlayerSequence();
+	        play.distributeCards();
+	        play.printCardList();
+	    }
+	}
